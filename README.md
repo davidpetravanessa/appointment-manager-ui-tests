@@ -1,1 +1,0 @@
-# appointment-manager-ui-tests
