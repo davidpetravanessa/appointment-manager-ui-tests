@@ -41,9 +41,7 @@ namespace AppointmentManager.AutomationTests.Base
             switch (AppSettings.BrowserType)
             {
                 case BrowserType.Chrome:
-                    var extensionPath = $"{Directory.GetCurrentDirectory()}\\Base\\AuthExtension";
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.AddArgument($@"--load-extension={extensionPath}");
                     return new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory, chromeOptions, TimeSpan.FromSeconds(180));
                 case BrowserType _browserType: throw new NotSupportedException($"{_browserType} is not a supported browser");
                 default: throw new NotSupportedException("not supported browser: <null>");

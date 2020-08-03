@@ -1,11 +1,12 @@
 ﻿Feature: Register
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to have acces in AppointmentManager app
+	As an user
+	I want to be able to register succesfully
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+	Background: 
+	Given I Acces AppointmentManager apllication
+
+@SmokeTest
+Scenario: Access aplication
+	Given I Acces AppointmentManager apllication
+    Then I should be on home page
