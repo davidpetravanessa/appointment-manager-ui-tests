@@ -4,6 +4,7 @@ using OpenQA.Selenium.Internal;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TechTalk.SpecFlow;
 
 namespace AppointmentManager.AutomationTests.Helpers
 {
@@ -27,6 +28,26 @@ namespace AppointmentManager.AutomationTests.Helpers
             {
                 return false;
             }
+        }
+
+        public static void DoubleClick(IWebElement element)
+        {
+            var actions = new OpenQA.Selenium.Interactions.Actions(WebDriver.Driver);
+            actions.DoubleClick(element).Perform();
+        }
+
+        public static class TableExtensions
+        {
+            public static Dictionary<string, string> ToDictionary(Table table)
+            {
+                var dictionary = new Dictionary<string, string>();
+                foreach (var row in table.Rows)
+                {
+                    dictionary.Add(row[0], row[1]);
+                }
+                return dictionary;
+            }
+
         }
     }
 }

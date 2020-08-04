@@ -5,7 +5,6 @@
 
 Background:
 	Given I Acces AppointmentManager apllication
-	Given I log in with user Test1@test.ro and MLQL2dJetoKX+HG90ttMRA== crypted password
 
 @SmokeTest
 Scenario: Create a service

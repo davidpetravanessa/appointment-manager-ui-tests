@@ -24,9 +24,17 @@ namespace AppointmentManager.AutomationTests.Pages
 
         public IWebElement AllertCloseButton => Sync.FindElementWait(By.XPath("//a[@class='close']"));
 
+        public IWebElement CurrentUserDropDown => Sync.FindElementWait(By.Id("currentUserDropdown"));
+        
+
         public IWebElement UsersMyServiceClientsMyAppointmentsAboutPAGES(string pageName)
         {
             return WebDriver.Driver.FindElement(By.XPath($"//li[@class='nav-item']/a[normalize-space()='{pageName}']"));
         }
+
+        public IWebElement CurrentUserDropDownItem(string option)
+        {
+            return WebDriver.Driver.FindElement(By.XPath($"//a[contains(@class,'dropdown-item') and text()='{option}']"));
+        }       
     }
 }

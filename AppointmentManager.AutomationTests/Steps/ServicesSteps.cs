@@ -1,7 +1,9 @@
 ﻿using AppointmentManager.AutomationTests.Helpers;
 using AppointmentManager.AutomationTests.Pages;
 using FluentAssertions;
+using OpenQA.Selenium;
 using RazorEngine.Compilation.ImpromptuInterface;
+using RazorEngine.Compilation.ImpromptuInterface.Optimization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,9 +35,15 @@ namespace AppointmentManager.AutomationTests.Steps
         [Given(@"I make an appointment to a service")]
         public void GivenIMakeAnAppointmentToAService()
         {
+            Sync.ExplicitWait(1);
+            Sync.FindElementWait(By.XPath("(//tbody/tr/td[4])[1]"));
             AppointmentManagerPages.ServicesPage.DetailButtonFirstService.Click();
-            AppointmentManagerPages.ServicesPage.CreateAppointmentButton.Click();
+            Sync.ExplicitWait(1);
+            //AppointmentManagerPages.ServicesPage.CreateAppointmentButton.Click();
+            Utilities.DoubleClick(AppointmentManagerPages.ServicesPage.CreateAppointmentButton);
+            Sync.ExplicitWait(1);
             AppointmentManagerPages.ServicesPage.AppointmentDateField.SendKeys("12/12/2021");
+            Sync.ExplicitWait(1);
             AppointmentManagerPages.MyServicesPage.SaveButton.Click();
         }
 

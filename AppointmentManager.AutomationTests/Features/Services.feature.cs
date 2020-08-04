@@ -81,9 +81,6 @@ namespace AppointmentManager.AutomationTests.Features
 #line 7
  testRunner.Given("I Acces AppointmentManager apllication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 8
- testRunner.Given("I log in with user Test1@test.ro and MLQL2dJetoKX+HG90ttMRA== crypted password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -95,7 +92,7 @@ namespace AppointmentManager.AutomationTests.Features
                     "SmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a service", null, tagsOfScenario, argumentsOfScenario);
-#line 11
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -118,16 +115,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 12
+#line 11
  testRunner.Given("I log in with user Test1@test.ro and MLQL2dJetoKX+HG90ttMRA== crypted password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
+#line 12
  testRunner.And("I access My Services page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 13
  testRunner.When("I create a service with the name Tamplarie", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
+#line 14
  testRunner.Then("The Tamplarie service should be successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -143,7 +140,7 @@ this.FeatureBackground();
                     "SmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Make an appointment", null, tagsOfScenario, argumentsOfScenario);
-#line 18
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -166,13 +163,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 19
+#line 18
 testRunner.Given("I log in with user test2@test2.com and kjwekouejLl1bMBMWmVHTg== crypted password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
+#line 19
 testRunner.And("I access Services page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 20
 testRunner.And("I make an appointment to a service", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

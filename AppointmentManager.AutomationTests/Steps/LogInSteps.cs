@@ -1,6 +1,7 @@
 ﻿using AppointmentManager.AutomationTests.Helpers;
 using AppointmentManager.AutomationTests.Pages;
 using FluentAssertions;
+using OpenQA.Selenium;
 using RazorEngine.Compilation.ImpromptuInterface;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,23 @@ namespace AppointmentManager.AutomationTests.Steps
             AppointmentManagerPages.LogInPage.SubmitLogInButton.Click();
         }
 
+        [When(@"I am successfully logged in with (.*)")]
         [Then(@"I am successfully logged in with (.*)")]
         public void ThenIAmSuccessfullyLoggedInWith(string username)
         {
             AppointmentManagerPages.LogInPage.UserLabelAfterLogIn(username).Exists().Should().BeTrue();
         }
+
+        [When(@"I tick (.*) option")]
+        [Then(@"I tick (.*) option")]
+        public void ThenITickLogOutOption(string option)
+        {
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.HomePage.CurrentUserDropDown.Click();
+            Sync.ExplicitWait(1);
+            Sync.FindElementWait(By.XPath($"//a[contains(@class,'dropdown-item') and text()='{option}']"));
+            AppointmentManagerPages.HomePage.CurrentUserDropDownItem(option).Click();
+        }
+
     }
 }
