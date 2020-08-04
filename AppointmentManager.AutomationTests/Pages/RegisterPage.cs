@@ -7,10 +7,10 @@ namespace AppointmentManager.AutomationTests.Pages
     {
         public IWebElement EmailRegisterField => Sync.FindElementWait(By.Name("email"));
 
-        public IWebElement PasswordRegisterButton => Sync.FindElementWait(By.Name("password"));
+        public IWebElement PasswordRegisterField => Sync.FindElementWait(By.Name("password"));
 
-        public IWebElement RepeatPasswordRegisterButton => Sync.FindElementWait(By.Name("repeat the password"));
+        public IWebElement RepeatPasswordRegisterField => Sync.FindElementWait(By.Name("passwordConfirm"));
 
-        public IWebElement SubmitRegisterButton => Sync.FindElementWait(By.XPath("//button[text()='Register']"));
+        public IWebElement SubmitRegisterButton => Sync.FindElementWait(By.XPath("//button[text()='Register']"));      
     }
 }

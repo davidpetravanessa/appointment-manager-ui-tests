@@ -25,5 +25,24 @@ namespace AppointmentManager.AutomationTests.Steps
             AppointmentManagerPages.HomePage.HomeButton.Exists().Should().BeTrue();
         }
 
+        [Given(@"I create a new user with (.*) username and (.*) password")]
+        public void GivenICreateANewUserWithTestUsernameAndPassword(string username, string password)
+        {
+            AppointmentManagerPages.HomePage.RegisterPageButton.Click();
+            Sync.ExplicitWait(2);
+            AppointmentManagerPages.RegisterPage.EmailRegisterField.SendKeys(username);
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.RegisterPage.PasswordRegisterField.SendKeys(password);
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.RegisterPage.RepeatPasswordRegisterField.SendKeys(password);
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.RegisterPage.SubmitRegisterButton.Click();
+        }
+
+        [Then(@"I am on login page")]
+        public void ThenIAmOnLoginPage()
+        {
+            AppointmentManagerPages.LogInPage.LogInLabel.Exists().Should().BeTrue();
+        }
     }
 }
