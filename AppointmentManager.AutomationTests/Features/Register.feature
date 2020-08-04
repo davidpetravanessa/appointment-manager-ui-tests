@@ -13,5 +13,10 @@ Scenario: Access aplication
 
 @SmokeTest
 Scenario: Register with valid user
-	Given I create a new user with Test1@test.ro username and MLQL2dJetoKX+HG90ttMRA== crypted password
+	Given I create a new user with Test1@test.ro username and Parola1 password
+	Then I am on login page
+
+@SmokeTest
+Scenario: Register with another valid user
+	Given I create a new user with Test2@test2.com username and Parola2 password
 	Then I am on login page

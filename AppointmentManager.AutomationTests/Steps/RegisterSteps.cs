@@ -25,16 +25,16 @@ namespace AppointmentManager.AutomationTests.Steps
             AppointmentManagerPages.HomePage.HomeButton.Exists().Should().BeTrue();
         }
 
-        [Given(@"I create a new user with (.*) username and (.*) crypted password")]
-        public void GivenICreateANewUserWithTestUsernameAndMLQLdJetoKXHGttMRACryptedPassword(string username, string password)
+        [Given(@"I create a new user with (.*) username and (.*) password")]
+        public void GivenICreateANewUserWithTestUsernameAndPassword(string username, string password)
         {
             AppointmentManagerPages.HomePage.RegisterPageButton.Click();
             Sync.ExplicitWait(2);
             AppointmentManagerPages.RegisterPage.EmailRegisterField.SendKeys(username);
             Sync.ExplicitWait(1);
-            AppointmentManagerPages.RegisterPage.PasswordRegisterField.SendKeys(AesEncryptionService.Decrypt(password));
+            AppointmentManagerPages.RegisterPage.PasswordRegisterField.SendKeys(password);
             Sync.ExplicitWait(1);
-            AppointmentManagerPages.RegisterPage.RepeatPasswordRegisterField.SendKeys(AesEncryptionService.Decrypt(password));
+            AppointmentManagerPages.RegisterPage.RepeatPasswordRegisterField.SendKeys(password);
             Sync.ExplicitWait(1);
             AppointmentManagerPages.RegisterPage.SubmitRegisterButton.Click();
         }

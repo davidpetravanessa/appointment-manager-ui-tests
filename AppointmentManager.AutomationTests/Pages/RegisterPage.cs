@@ -11,6 +11,6 @@ namespace AppointmentManager.AutomationTests.Pages
 
         public IWebElement RepeatPasswordRegisterField => Sync.FindElementWait(By.Name("passwordConfirm"));
 
-        public IWebElement SubmitRegisterButton => Sync.FindElementWait(By.XPath("//button[text()='Register']"));
+        public IWebElement SubmitRegisterButton => Sync.FindElementWait(By.XPath("//button[text()='Register']"));      
     }
 }
