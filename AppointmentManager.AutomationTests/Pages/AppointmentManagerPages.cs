@@ -14,5 +14,6 @@ namespace AppointmentManager.AutomationTests.Pages
 
         public static HomePage HomePage => GetPage<HomePage>();
         public static RegisterPage RegisterPage => GetPage<RegisterPage>();
+        public static LogInPage LogInPage => GetPage<LogInPage>();
     }
 }

@@ -1,12 +1,16 @@
 ﻿using AppointmentManager.AutomationTests.Actions;
 using AppointmentManager.AutomationTests.Base;
+using AppointmentManager.AutomationTests.Helpers;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using BoDi;
+using Dapper;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Text;
 using TechTalk.SpecFlow;
@@ -41,13 +45,6 @@ namespace AppointmentManager.AutomationTests.Setup
         public void AfterScenario()
         {
             Browser.Quit();
-        }
-
-        private void ReplaceString(string file, string oldValue, string newValue)
-        {
-            var fileContent = File.ReadAllText(file);
-            fileContent = fileContent.Replace(oldValue, newValue);
-            File.WriteAllText(file, fileContent);
         }
 
         [BeforeTestRun]
