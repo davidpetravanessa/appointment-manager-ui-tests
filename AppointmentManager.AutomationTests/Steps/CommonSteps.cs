@@ -10,6 +10,7 @@ namespace AppointmentManager.AutomationTests.Steps
     [Binding]
     public class CommonSteps
     {
+        [When(@"I access (.*) page")]
         [Given(@"I access (.*) page")]
         public void GivenIAccesMyServicesPage(string pageName)
         {

@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Diagnostics;
-using System.IO;
 using AppointmentManager.AutomationTests.Helpers;
 
 namespace AppointmentManager.AutomationTests.Base

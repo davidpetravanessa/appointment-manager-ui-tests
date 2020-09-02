@@ -18,5 +18,6 @@ namespace AppointmentManager.AutomationTests.Pages
         public static MyServicesPage MyServicesPage => GetPage<MyServicesPage>();
         public static ServicesPage ServicesPage => GetPage<ServicesPage>();
         public static MyProfilePage MyProfilePage => GetPage<MyProfilePage>();
+        public static Common Common => GetPage<Common>();
     }
 }

@@ -1,8 +1,4 @@
 ﻿using AppointmentManager.AutomationTests.Base;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AppointmentManager.AutomationTests.Actions
 {

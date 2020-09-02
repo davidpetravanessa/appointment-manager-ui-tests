@@ -26,7 +26,7 @@ namespace AppointmentManager.AutomationTests.Steps
         }
 
         [Given(@"I create a new user with (.*) username and (.*) password")]
-        public void GivenICreateANewUserWithTestUsernameAndPassword(string username, string password)
+        public void GivenICreateANewUserWithUsernameAndPassword(string username, string password)
         {
             AppointmentManagerPages.HomePage.RegisterPageButton.Click();
             Sync.ExplicitWait(2);
@@ -43,6 +43,13 @@ namespace AppointmentManager.AutomationTests.Steps
         public void ThenIAmOnLoginPage()
         {
             AppointmentManagerPages.LogInPage.LogInLabel.Exists().Should().BeTrue();
+        }
+
+        [Then(@"I can't register in the application")]
+        public void ThenICanTRegisterInTheApplication()
+        {
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.Common.ErrorLabel.Exists().Should().BeTrue();
         }
     }
 }

@@ -22,9 +22,15 @@ namespace AppointmentManager.AutomationTests.Steps
 
             var dictionary = TableExtensions.ToDictionary(editProfileTable);
             Sync.ExplicitWait(1);
+            AppointmentManagerPages.MyProfilePage.FirstNameField.Clear();
+            Sync.ExplicitWait(1);
             AppointmentManagerPages.MyProfilePage.FirstNameField.SendKeys(dictionary["FirstName"]);
             Sync.ExplicitWait(1);
+            AppointmentManagerPages.MyProfilePage.LastNameField.Clear();
+            Sync.ExplicitWait(1);
             AppointmentManagerPages.MyProfilePage.LastNameField.SendKeys(dictionary["LastName"]);
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.MyProfilePage.PhoneField.Clear();
             Sync.ExplicitWait(1);
             AppointmentManagerPages.MyProfilePage.PhoneField.SendKeys(dictionary["Phone"]);
 
