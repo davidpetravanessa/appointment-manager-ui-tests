@@ -1,10 +1,6 @@
 ﻿using AppointmentManager.AutomationTests.Base;
 using AppointmentManager.AutomationTests.Helpers;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AppointmentManager.AutomationTests.Pages
 {
@@ -17,6 +13,9 @@ namespace AppointmentManager.AutomationTests.Pages
         public IWebElement PasswordLogInField => Sync.FindElementWait(By.Name("password"));
 
         public IWebElement SubmitLogInButton => Sync.FindElementWait(By.XPath("//button[text()='Log in']"));
+
+        public IWebElement LogInTag => Sync.FindElementWait(By.XPath("//a[text()='Log in']"));
+        
 
         public IWebElement UserLabelAfterLogIn(string username)
         {
