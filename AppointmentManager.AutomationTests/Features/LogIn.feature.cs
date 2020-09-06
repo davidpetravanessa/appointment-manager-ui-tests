@@ -222,7 +222,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Can\'t login with invalid email", null, tagsOfScenario, argumentsOfScenario);
 #line 26
- this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -248,7 +248,7 @@ this.FeatureBackground();
  testRunner.Given("I log in with user Invalid@test.ro and MLQL2dJetoKX+HG90ttMRA== password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 28
-  testRunner.Then("The log in failed with Invalid@test.ro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The log in failed with Invalid@test.ro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -297,13 +297,13 @@ this.FeatureBackground();
                             "value"});
                 table1.AddRow(new string[] {
                             "FirstName",
-                            "Test"});
+                            "Mark"});
                 table1.AddRow(new string[] {
                             "LastName",
-                            "TestABC"});
+                            "Chill"});
                 table1.AddRow(new string[] {
                             "Phone",
-                            "0712349862"});
+                            "07123400000"});
 #line 34
  testRunner.Then("I can edit the user profile", ((string)(null)), table1, "Then ");
 #line hidden

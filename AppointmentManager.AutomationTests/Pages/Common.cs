@@ -1,4 +1,5 @@
-﻿using AppointmentManager.AutomationTests.Helpers;
+﻿using AppointmentManager.AutomationTests.Base;
+using AppointmentManager.AutomationTests.Helpers;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -16,5 +17,9 @@ namespace AppointmentManager.AutomationTests.Pages
 
         public IWebElement ErrorLabel => Sync.FindElementWait(By.XPath("//h1[text()='Whitelabel Error Page']"));
 
+        public IWebElement ErrorMessage(string errorMessage)
+        {
+            return WebDriver.Driver.FindElement(By.XPath($"//strong[text()='{errorMessage}']"));
+        }
     }
 }

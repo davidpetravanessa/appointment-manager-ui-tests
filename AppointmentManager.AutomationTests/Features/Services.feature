@@ -41,7 +41,7 @@ Scenario: Accept Appointment- verify status
 
 @SmokeTest
 Scenario: HappyFlow of an appointment from confirm to done
-	Given I log in with user test2@test2.com and Parola2 crypted password
+	Given I log in with user test2@test2.com and Parola2 password
 	And I access Services page
 	And I make an appointment to a service
 	And I tick Log out option
@@ -50,7 +50,6 @@ Scenario: HappyFlow of an appointment from confirm to done
 	And I can Confirm an appointment
 	Then I can Set to Done an appointment
 
-#Then The apoointment state should be updated to DONE
 @SmokeTest
 Scenario: Decline appointment
 	Given I log in with user test2@test2.com and Parola2 password
@@ -61,7 +60,6 @@ Scenario: Decline appointment
 	And I access My Services page
 	And I can Decline an appointment
 
-#And The apoointment state should be updated to DECLINED
 Scenario: Edit servicce name that delete
 	Given I log in with user Test1@test.ro and Parola1 password
 	When I access My Services page
