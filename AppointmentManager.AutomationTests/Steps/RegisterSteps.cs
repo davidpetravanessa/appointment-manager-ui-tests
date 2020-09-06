@@ -2,9 +2,6 @@
 using AppointmentManager.AutomationTests.Helpers;
 using AppointmentManager.AutomationTests.Pages;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace AppointmentManager.AutomationTests.Steps
@@ -51,5 +48,13 @@ namespace AppointmentManager.AutomationTests.Steps
             Sync.ExplicitWait(1);
             AppointmentManagerPages.Common.ErrorLabel.Exists().Should().BeTrue();
         }
+
+        [Then(@"The following error message should be displayed (.*)")]
+        public void ThenTheFollowingErrorMessageShouldBeDisplayed(string errorMessage)
+        {
+            Sync.ExplicitWait(1);
+            AppointmentManagerPages.Common.ErrorMessage(errorMessage).Displayed.Should().BeTrue();
+        }
+
     }
 }
