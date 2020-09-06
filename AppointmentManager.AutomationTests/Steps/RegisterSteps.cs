@@ -2,9 +2,6 @@
 using AppointmentManager.AutomationTests.Helpers;
 using AppointmentManager.AutomationTests.Pages;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace AppointmentManager.AutomationTests.Steps
