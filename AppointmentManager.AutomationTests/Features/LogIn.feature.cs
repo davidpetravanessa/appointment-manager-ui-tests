@@ -297,13 +297,13 @@ this.FeatureBackground();
                             "value"});
                 table1.AddRow(new string[] {
                             "FirstName",
-                            "Mark"});
+                            "Petra"});
                 table1.AddRow(new string[] {
                             "LastName",
-                            "Chill"});
+                            "Test"});
                 table1.AddRow(new string[] {
                             "Phone",
-                            "07123400000"});
+                            "07123404500"});
 #line 34
  testRunner.Then("I can edit the user profile", ((string)(null)), table1, "Then ");
 #line hidden

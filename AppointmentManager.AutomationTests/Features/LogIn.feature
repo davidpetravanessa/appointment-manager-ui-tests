@@ -33,6 +33,6 @@ Scenario: Edit user profile
 	When I tick My Profile option
 	Then I can edit the user profile
 		| key       | value       |
-		| FirstName | Mark        |
-		| LastName  | Chill       |
-		| Phone     | 07123400000 |
+		| FirstName | Petra       |
+		| LastName  | David       |
+		| Phone     | 07123404500 |

@@ -158,7 +158,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 16
- testRunner.Given("I create a new user with Test2401191@test.ro username and Parola1 password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I create a new user with PetraTest@test.ro username and Parola1 password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
  testRunner.Then("I am on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

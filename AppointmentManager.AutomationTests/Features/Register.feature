@@ -13,7 +13,7 @@ Scenario: Access aplication
 
 @SmokeTest
 Scenario: Register with valid user
-	Given I create a new user with Test2401191@test.ro username and Parola1 password
+	Given I create a new user with PetraDavidTest@test.ro username and Parola1 password
 	Then I am on login page
 
 @SmokeTest
